@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Running concurrent coroutines."""
 import asyncio
+from typing import List
 
 
 task_wait_random = __import__("3-tasks").task_wait_random
 
 
-def task_wait_n(n: int, max_delay: int):
+def task_wait_n(n: int, max_delay: int) -> List[float]:
     """Wait for `task_wait_random(max_delay)` n times."""
 
     async def sub_coro():
